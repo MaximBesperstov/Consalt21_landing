@@ -1,0 +1,541 @@
+
+
+*,
+*::before,
+*::after {
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 { 
+    font-family: 'Poppins', sans-serif;  
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 120%; 
+}
+h2{ 
+    font-family: 'Poppins', sans-serif;  
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 120%; 
+}
+h3{
+    font-family: 'Poppins', sans-serif;  
+    font-weight: medium;
+    font-size: 24px;
+    line-height: 120%; 
+}
+
+
+
+
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 52px;
+}
+
+/* Header */
+#header-section {
+    padding: 20px 0 20px;   	
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo__img,
+.footer-about__img {
+    width: 188px;
+    height: 28px;
+}
+
+.nav-main {
+    display: flex;
+}
+
+.nav-main__list {
+    gap: 30px;    
+    display: flex;
+    width: 564px;
+    height: 14px;
+    justify-content: space-between;
+    text-align: center;
+
+}
+.nav-sub__list {
+    gap: 30px;
+    display: flex;
+    justify-content: flex-end;
+    width: 376px;
+    height: 14px;
+}
+
+.nav-main__link{    
+    color: #79797A;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+.nav-sub__link{    
+    color: #fff;
+    font-family: 'Ubuntu';
+    font-weight: bold;
+    font-size: 16px;
+}
+.nav-main__link:hover {
+    color: #FFE3E3;
+}
+
+
+/* hero*/
+.hero{
+    height: 668px;
+    width: 100%;
+    position: absolute;
+    overflow:hidden;
+    top: 0px;
+    left: 0px;
+    z-index: -1 ;
+    /*background-image: url("img/hero.jpg");*/
+    background: #050505;
+    opacity: 1;
+    text-align: center;
+    vertical-align: middle;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Здесь цвет фона и его прозрачность */
+    z-index: 1; /* Поместите псевдоэлемент над изображением */
+}
+.hero img{
+   top:0;
+   left:0;
+   width:100%;
+   height:900px;
+   object-fit:cover;
+}
+
+.hero h1{
+    width: 696px;
+    height: 179px;
+    color: #fff;
+    z-index: 1;
+    top: 168px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 120%;
+    font-size: 50px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+
+.Dbtn{
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    color: #050505;
+    font-family: 'Ubuntu';
+    font-weight: medium;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    top: 360px;
+    left: 40%;
+    z-index: 1; /* Установите значение z-index выше, чем у .hero */
+}
+.btn {
+    left: 40%;
+    width: 174px;
+    height: 45px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+}
+.btn2 {
+    left: 60%;
+    width: 100px;
+    height: 45px;
+    padding: 10px;
+    background: #662020;
+    color:#fff;
+    border-radius: 8px;
+}
+.hero__text{
+    padding-top: 68px;
+    display: inline-block;
+}
+
+/* about us*/
+
+.about__us{
+    color:#000;
+    position: relative;
+    padding: 0px;
+    margin-top: 600px; /* Высота .hero */
+    display: flex;  
+padding: 80px 72px;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 60px;
+align-self: stretch;
+background: linear-gradient(199deg, rgba(51, 6, 6, 0.70) -35.82%, rgba(51, 6, 6, 0.00) 87.37%);
+background-color: #000;
+}
+
+.about__main{
+    display: flex; /* Используем flex для выравнивания элементов в линию */
+    align-items: center; /* Выравниваем элементы по центру вертикально */
+    gap: 20px; /* Устанавливаем расстояние между элементами */
+}
+
+.about__main img{
+    width: 670px;
+    height: 370px;
+    border: 16px solid #1B1B1B;
+    border-radius: 16px 16px 144px 16px;
+}
+
+.about__us h2{
+    color:#fff;
+    font-family: 'Poppins', sans-serif;  
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 120%; 
+}
+
+.about__us p{
+    color:#c9c9c9;
+    font-family: 'Ubuntu';
+    font-weight: medium;
+
+}
+
+.leftblock{
+    display: flex;
+    flex-direction: column;
+}
+
+.about__sub{
+    margin: 60px 0 60px 0;
+    width: 1296px;
+    height: 555px;
+    display: flex;
+    flex-wrap: wrap; /* Позволяет блокам переноситься на новую строку */
+    justify-content: space-between; /* Равномерное распределение блоков по горизонтали */
+    align-content: space-between; /* Равномерное распределение блоков по вертикали */
+}
+
+.about__sub h3{    
+    font-family: 'Poppins', sans-serif;  
+    font-weight: medium;
+    font-size: 24px;
+    line-height: 120%; 
+    color:#fff;
+}
+.about__sub p{
+    color:#c9c9c9;
+    font-family: 'Ubuntu';
+    font-weight: medium;
+    line-height:160%;
+}
+.about__sub > div {
+   width: 351px;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+/*.about__sub > div:not(.block5)
+.about__sub > div.block5  */
+    
+    .block5{
+        
+    align-items: center;
+    }
+
+.block5__img {
+    width: 448px;
+    height: 66px;
+}
+
+
+
+/* our__services */
+
+.our__services{
+   /* width: 1296px;
+    height: 858px; */
+    background: linear-gradient(199deg, rgba(51, 6, 6, 0.70) -35.82%, rgba(51, 6, 6, 0.00) 87.37%);
+    background-color: #000;
+    padding-bottom: 80px;
+}
+
+.our__services h1{
+color: #fff;
+z-index: 1;
+padding: 50px 0 16px 0;
+font-style: normal;
+font-weight: bold;
+line-height: 120%;
+font-size: 50px;
+}
+
+
+.main__slider{    
+    /*width: 1296px;*/
+    height: 758px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left__slider{
+width: 636px;
+height: 758px;
+border: 2px solid #79797A;
+border-radius: 182px 6px 72px 32px;
+}
+
+.left__slider img{
+    object-fit: cover;
+    width: 656px;
+    height: 284px;
+    border-radius: 144px 5px 5px 5px ;
+}
+.left__slider h2{
+    color:#FFE3E3;
+    font-size: 34px;
+    font-family: 'Ubuntu';
+    font-weight: medium;
+    line-height:120%;
+}
+.left__slider p{
+    color:#cc9191;
+    font-size: 18px;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    line-height:160%;
+}
+
+.slider__text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+
+.left__slider ul {
+    color:#000;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 20px;
+}
+
+.left__slider li {
+    color:#fff;
+    background-color: #1B1B1B;
+    border-radius: 52px;
+    border: 4px solid #000;
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    line-height:160%;
+}
+.left__btn {
+    color:#fff;
+    border: 4px solid #fff;
+    width: 604px;
+    height: 61px;
+    margin: 20px 12px;
+    border-radius: 8px 8px 46px 12px;
+}
+
+
+
+.right__slider{
+    width: 636px;
+    height: 758px;
+    border: 2px solid #79797A;
+    border-radius:  6px 182px 32px 72px;
+    }
+    
+    .right__slider img{
+        object-fit: cover;
+        width: 656px;
+        height: 284px;
+        border-radius:  5px 144px 5px 5px ;
+    }
+    .right__slider h2{
+        color:#FFE3E3;
+        font-size: 34px;
+        font-family: 'Ubuntu';
+        font-weight: medium;
+        line-height:120%;
+    }
+    .right__slider p{
+        color:#cc9191;
+        font-size: 18px;
+        font-family: 'Ubuntu';
+        font-weight: 500;
+        line-height:160%;
+    }
+    
+    .right__slider ul {
+        color:#000;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding-left: 0 20px;
+    }
+    
+    .right__slider li {
+        color:#fff;
+        background-color: #1B1B1B;
+        border-radius: 52px;
+        border: 4px solid #000;
+        padding: 10px;
+        font-size: 14px;
+        font-family: 'Ubuntu';
+        font-weight: 500;
+        line-height:160%;
+    }
+    .right__btn {
+        color:#fff;
+        border: 4px solid #fff;
+        width: 604px;
+        height: 61px;
+        margin: 20px 12px;
+        border-radius: 8px 8px 12px 46px;
+    }
+
+    .bottom__slider{
+        margin-top: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .dots img{
+margin:0 12px;
+    }
+    
+    .bottom__slider img:hover{
+        cursor: pointer;
+    }
+
+
+    /* reviews */
+
+    .reviews {
+       /* width: 1440px;*/
+        padding: 80px 0;
+        background: linear-gradient(223deg, rgba(51, 6, 6, 0.70) -29.78%, rgba(51, 6, 6, 0.00) 75.75%);        
+     background-color: #000;
+     color: #fff;
+}
+.reviews h2{    
+    font-family: 'Poppins', sans-serif;  
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 120%; 
+    color:#fff;
+}
+.slider__reviews{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.slider__card{
+    width: 590px;
+    height: 496px;
+    margin-left: 27px;
+}
+.slider__card img{    
+    width: 590px;
+    height: 320px;
+    object-fit: cover;
+    object-position : 100% 20%;
+    border-radius: 12px;
+}
+.topcard h3{
+font-size: 32px;
+}
+.topcard p{    
+    color:#808181;
+    font-size: 16px;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    line-height:160%;
+}
+.botcard {
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+}
+.botcard p{
+    border-left: 2px solid #fff;
+    padding: 4px;
+}
+.dots__slider{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.dots__slider img{
+    margin:0 12px;
+}
+/* maps */
+.maps{
+    height: 664px;
+    background: #050505;
+}
+.frame img{
+    width: 1440px;
+}
+
+/* footer */
+
+.bottom__main{
+    background-color: #000;
+    color: #fff;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 10px;
+    text-align: center;
+    vertical-align: top;
+}
+
+a {
+    text-decoration: none;
+    color: #fff; /* Цвет ссылок */
+}
+
+p {
+    color: #808181;
+    margin: 5px 0;
+}
